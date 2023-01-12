@@ -1,7 +1,7 @@
 .App {
-  /* text-align: center; */
   margin-left: 10%;
   margin-top: 5%;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .App-logo {
@@ -38,26 +38,41 @@
     transform: rotate(360deg);
   }
 }
+.inputDiv{
+  width: 380px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+input{
+  height: 30px;
+  font-size: large;
+  font-weight: bolder;
+  margin-right: 34px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+button{
+  background-color: green;
+  color: white;
+  font-size: large;
+  width: 100px;
+  height: 36px;
+  font-family: 'Times New Roman', Times, serif;
+}
 
 table {
-  border: 2px solid rgb(0, 0, 0);
-  /* width: 0px;
-  height: 200px; */
+  background-color: black;
 }
   
 th {
+  width: 170px;
+  background-color: white;
   text-align: left;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; 
-  border-right: 1px solid black;
-  border-left: 1px solid black;
 }
-  
+
 td {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  text-align: left;
-}
- /* border-left-width: 1px;" */
+  width: 180px;
+  background-color: white;
+ }
+ 

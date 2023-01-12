@@ -12,7 +12,7 @@ function App() {
     sistGodkjent:""
   });
 
-   const {kjoretoyId , merke, handelsbetegnelse, kontrollfrist, sistGodkjent} = tableData;
+   const {kjoretoyId , merke, handelsbetegnelse, kontrollfrist, sistGodkjent, registrertForstegangNorgeDato,} = tableData;
   const getVehivleInfo = (number) => {
     fetch(
       `http://localhost:8000/?number=${number}`,     
@@ -31,12 +31,14 @@ const handleChange = (e) => {
 
   return (
     <div className="App">
-        <text>Enter the Vehicle registration number</text>
-        <div>
+      <div >
+        <h2>Enter the vehicle registration number</h2>
+        <div className='inputDiv'>
           <input type="text" value={number} onChange={handleChange} />
           <button onClick={()=>{
             getVehivleInfo(number);
           }}>Submit</button>
+      </div>
         
       <table>
         <tr>
@@ -52,15 +54,19 @@ const handleChange = (e) => {
           <td>{merke[0].merke}</td>
         </tr>
         <tr>
-          <th>handelsbetegnelse</th>
+          <th>Handelsbetegnelse</th>
           <td>{handelsbetegnelse}</td>
         </tr>
         <tr>
-          <th>sistGodkjent</th>
+          <th>Forstegangsregistrering</th>
+          <td>{registrertForstegangNorgeDato}</td>
+        </tr>
+        <tr>
+          <th>SistGodkjent</th>
           <td>{sistGodkjent}</td>
         </tr>
         <tr>
-          <th>kontrollfrist</th>
+          <th>Kontrollfrist</th>
           <td>{kontrollfrist}</td>
         </tr>
       </table>
